@@ -13,17 +13,17 @@ app.use(express.json());
 app.use(cors()); // for front-end access
 
 // Serve static files from the "public" directory
-app.use(express.static(path.join(__dirname, 'public')));
+
 
 
 //Define a simple GET route for the homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html')); 
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Route to return basic personal details
 
-app.get('https://git.heroku.com/rocky-thicket-67822.git/about', (req, res) => {
+app.get('/about', (req, res) => {
     const aboutMe = {
         name: "Yuyang Peng",
         role: "Junior Front-end developer",
@@ -34,7 +34,7 @@ app.get('https://git.heroku.com/rocky-thicket-67822.git/about', (req, res) => {
 });
 
 //Route to return a list of our projects 
-app.get('https://git.heroku.com/rocky-thicket-67822.git/projects', (req, res) => {
+app.get('/projects', (req, res) => {
     const projects = [
         { name: "Portfolio Website", description: "sth" },
         { name: "Portfolio 2", description: "sth" }
@@ -44,7 +44,7 @@ app.get('https://git.heroku.com/rocky-thicket-67822.git/projects', (req, res) =>
 });
 
 //Define a route for contact information
-app.get('https://git.heroku.com/rocky-thicket-67822.git/contact', (req, res) => {
+app.get('/contact', (req, res) => {
     const contactInfo = {
         email: "yypengTom@gmail.com",
         linked: "blank",
