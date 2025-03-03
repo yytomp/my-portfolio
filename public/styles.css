@@ -1,0 +1,150 @@
+﻿/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a; /* Dark background */
+    color: #fff; /* Light text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+/* Header Styles */
+header {
+    background-color: #333; /* Dark gray header */
+    padding: 20px 0;
+    text-align: center;
+}
+
+    header nav ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+            header nav ul li a {
+                color: #fff;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 18px;
+                transition: color 0.3s ease;
+            }
+
+                /* Header Link Hover Effects */
+                header nav ul li a:hover {
+                    color: #c0392b; /* Red color on hover */
+                }
+
+/* Section Styles */
+section {
+    padding: 20px;
+    margin: 20px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    section h2, section h3 {
+        color: #9b59b6; /* Purple for sub-headings */
+    }
+
+    section p {
+        color: #ddd; /* Light gray text for better readability */
+    }
+
+/* Skills Section */
+#skills h3 {
+    color: #f39c12; /* Yellow for skills headers */
+}
+
+/* Contact Section */
+#contact ul {
+    padding: 0;
+    list-style: none;
+}
+
+    #contact ul li {
+        margin-bottom: 10px;
+    }
+
+#contact a {
+    color: #f39c12; /* Yellow links for contact */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+    /* Contact Link Hover Effects */
+    #contact a:hover {
+        color: #c0392b; /* Red on hover for contact links */
+    }
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+    /* Footer Text */
+    footer p {
+        margin: 0;
+    }
+
+/* Button Styling */
+button {
+    background-color: #9b59b6; /* Purple button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+    /* Button Hover Effect */
+    button:hover {
+        background-color: #c0392b; /* Red color on hover */
+    }
+
+/* Add a smooth background animation for the header */
+header {
+    background: linear-gradient(45deg, #9b59b6, #c0392b);
+    background-size: 400% 400%;
+    animation: gradientAnimation 8s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Section Hover Effects */
+section:hover {
+    background-color: #2c3e50; /* Darker section on hover */
+    transition: background-color 0.3s ease;
+}
