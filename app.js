@@ -23,7 +23,7 @@ app.get('/', (req, res) => {
 
 // Route to return basic personal details
 
-app.get('/about', (req, res) => {
+app.get('https://git.heroku.com/rocky-thicket-67822.git/about', (req, res) => {
     const aboutMe = {
         name: "Yuyang Peng",
         role: "Junior Front-end developer",
@@ -34,7 +34,7 @@ app.get('/about', (req, res) => {
 });
 
 //Route to return a list of our projects 
-app.get('/projects', (req, res) => {
+app.get('https://git.heroku.com/rocky-thicket-67822.git/projects', (req, res) => {
     const projects = [
         { name: "Portfolio Website", description: "sth" },
         { name: "Portfolio 2", description: "sth" }
@@ -44,7 +44,7 @@ app.get('/projects', (req, res) => {
 });
 
 //Define a route for contact information
-app.get('/contact', (req, res) => {
+app.get('https://git.heroku.com/rocky-thicket-67822.git/contact', (req, res) => {
     const contactInfo = {
         email: "yypengTom@gmail.com",
         linked: "blank",
