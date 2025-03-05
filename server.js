@@ -14,11 +14,12 @@ app.use(cors()); // for front-end access
 
 // Serve static files from the "public" directory
 
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 //Define a simple GET route for the homepage
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // Route to return basic personal details
