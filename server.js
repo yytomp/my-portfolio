@@ -39,7 +39,7 @@ app.get('/about', (req, res) => {
 app.get('/contact', (req, res) => {
     const contactInfo = {
         email: "yypengTom@gmail.com",
-        phone: "0426470217"
+        phone: "0426470217",
         github: "https://github.com/yytomp"
     };
     res.json(contactInfo);
