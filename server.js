@@ -27,29 +27,20 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     const aboutMe = {
         name: "Yuyang Peng",
-        role: "Junior Front-end developer",
-        description: "Passionate about web development, enjoy learning ways of thinking and problem sovling",
+        role: "that IT guy - Passionate about web development, enjoy learning ways of thinking and problem sovling",
+        description: "The IT team looks after 500+ employee across 3 states. Common devices are windows10/11, ipads, macbooks, barcode scanner, Hp printers,wi-fi,aruba switches, A/V system",
         skills: ["Django", "C", "Data Strcture", "JavaScript", "GIT", "APIs"]
     };
     res.json(aboutMe);
 });
 
-//Route to return a list of our projects 
-app.get('/projects', (req, res) => {
-    const projects = [
-        { name: "Portfolio Website", description: "sth" },
-        { name: "Portfolio 2", description: "sth" }
-    ]
-
-    res.json(projects);
-});
 
 //Define a route for contact information
 app.get('/contact', (req, res) => {
     const contactInfo = {
         email: "yypengTom@gmail.com",
-        linked: "blank",
-        github: "blank"
+        phone: "0426470217"
+        github: "https://github.com/yytomp"
     };
     res.json(contactInfo);
 });
