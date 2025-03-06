@@ -29,7 +29,7 @@ app.get('/about', (req, res) => {
         name: "Yuyang Peng",
         role: "that IT guy - Passionate about web development, enjoy learning ways of thinking and problem sovling",
         description: "The IT team looks after 500+ employee across 3 states. Common devices are windows10/11, ipads, macbooks, barcode scanner, Hp printers,wi-fi,aruba switches, A/V system",
-        skills: ["Django", "C", "Data Strcture", "JavaScript", "GIT", "APIs"]
+        skills: ["Django", "C", "Data Structure", "JavaScript", "GIT", "APIs"]
     };
     res.json(aboutMe);
 });
