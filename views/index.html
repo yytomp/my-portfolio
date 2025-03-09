@@ -7,6 +7,7 @@
     <meta name="description" content="About me - IT Support, Programmer, Hip-Hop Dancer, Musical Actor">
     <title>About Me - Yuyang Peng</title>
     <link rel="stylesheet" href="./styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -60,15 +61,23 @@
     <section id="contact">
         <h2>Contact</h2>
         <p>If you'd like to get in touch with me, feel free to send me an email or connect with me on GitHub.</p>
-        <ul>
-            <li>Email: <a href="mailto:yypengTom@gmail.com">yypengTom@gmail.com</a></li>
-            <li>Phone: 0426 470 217</li>
-            <li>GitHub: <a href="https://github.com/yytomp" target="_blank">Yuyang Peng GitHub</a></li>
-        </ul>
+            <ul>
+                <li>Email: <a href="mailto:" id="email"></a></li>
+                <li>Phone: <span id="phone"></span></li>
+                <li>GitHub: <a href="" id="github" target="_blank"></a></li>
+            </ul>
     </section>
 
     <footer>
-        <p>&copy; 2025 Yuyang Peng. All rights reserved.</p>
+        <div class="footer-content">
+
+            <p>&copy; 2025 Yuyang Peng. All rights reserved.</p>
+            <p>Contact Info:</p>
+            <p>
+                <a href="mailto:" id="footer-email"><i class="fas fa-envelope"></i></a>
+                <a href="" id="footer-github" target="_blank"><i class="fab fa-github"></i></a>
+            </p>
+        </div>
     </footer>
 
 
@@ -110,6 +119,27 @@
                     });
             }
         });
+
+        function fetchContactInfo() {
+            // Fetch the contact data from the server
+            fetch('/contact')
+                .then(response => response.json())
+                .then(data => {
+                    // Display the contact data on the page
+                    document.getElementById('email').textContent = data.email;
+                    document.getElementById('email').href = `mailto:${data.email}`;
+                    document.getElementById('phone').textContent = data.phone;
+                    document.getElementById('github').textContent = data.github;
+                    document.getElementById('github').href = data.github;
+
+                    document.getElementById('footer-email').href = `mailto:${data.email}`;
+                    document.getElementById('footer-github').href = data.github;
+                })
+                .catch(error => console.error('Error fetching contact data:', error));
+        }
+            // Fetch contact info once the page is loaded
+        window.onload = fetchContactInfo;
+       
     </script>
 </body>
 
