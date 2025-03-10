@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
 app.get('/about', (req, res) => {
     const aboutMe = {
         name: "Yuyang Peng",
-        role: "that IT guy - Passionate about web development, enjoy learning ways of thinking and problem sovling",
+        role: "that IT guy",
         description: "The IT team looks after 500+ employee across 3 states. Common devices are windows10/11, ipads, macbooks, barcode scanner, Hp printers,wi-fi,aruba switches, A/V system",
         skills: ["Django", "C", "Data Structure", "JavaScript", "GIT", "APIs"]
     };
